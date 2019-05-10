@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-toolbar>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
+      <v-toolbar-title>Title</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn href="#/" flat>Inicio</v-btn>
+        <v-btn href="#/contacto" flat>Contacto</v-btn>
+        <v-btn flat>Quienes somos</v-btn>
+</v-toolbar-items>
+</v-toolbar>
+    <v-container>
+      <v-layout row wrap>
+        <router-view></router-view>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
   }
 }
 </script>
@@ -23,6 +34,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
